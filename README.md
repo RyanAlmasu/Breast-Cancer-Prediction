@@ -19,11 +19,3 @@ The app uses a machine learning model to predict the likelihood of the cell clus
 ### 4. Disclaimer
 
 The application includes a disclaimer stressing that it should assist medical professionals in making a diagnosis but should not be used as a substitute for professional medical advice.
-
-## Usage
-
-1. Run the Streamlit web application using the following command:
-
-   ```bash
-   streamlit run your_script_name.py
-   ```
