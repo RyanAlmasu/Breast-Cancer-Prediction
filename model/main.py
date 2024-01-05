@@ -30,7 +30,7 @@ def train_and_save_model(data):
     return model, scaler
 
 def load_clean_data():
-    data = pd.read_csv("data/data.csv")
+    data = pd.read_csv("./data/data.csv")
     data = data.drop(['Unnamed: 32', 'id'], axis=1)
     data['diagnosis'] = data['diagnosis'].map({'M': 1, 'B': 0})
     return data
@@ -39,10 +39,10 @@ def main():
     data = load_clean_data()
     trained_model, data_scaler = train_and_save_model(data)
 
-    with open('model/trained_model.pkl', 'wb') as model_file:
+    with open('./model/trained_model.pkl', 'wb') as model_file:
         pickle.dump(trained_model, model_file)
     
-    with open('model/data_scaler.pkl', 'wb') as scaler_file:
+    with open('./model/data_scaler.pkl', 'wb') as scaler_file:
         pickle.dump(data_scaler, scaler_file)
 
 if __name__ == '__main__':
