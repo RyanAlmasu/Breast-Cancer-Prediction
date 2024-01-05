@@ -1,28 +1,29 @@
-# Breast cancer diagnosis predictor
+# Breast Cancer Predictor
 
-## Overview
+This Streamlit web application is designed to predict whether a breast mass is benign or malignant based on cell nuclei measurements. The app provides an interactive interface where users can input their measurements and receive predictions using a machine learning model.
 
-The Breast Cancer Diagnosis app is a machine learning-powered tool designed to assist medical professionals in diagnosing breast cancer. Using a set of measurements, the app predicts whether a breast mass is benign or malignant. It provides a visual representation of the input data using a radar chart and displays the predicted diagnosis and probability of being benign or malignant. The app can be used by manually inputting the measurements or by connecting it to a cytology lab to obtain the data directly from a machine. The connection to the laboratory machine is not a part of the app itself.
+## Features
 
-The app was developed as a machine learning exercice from the public dataset [Breast Cancer Wisconsin (Diagnostic) Data Set](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data). Note that this dataset may not be reliable as this project was developed for educational purposes in the field of machine learning only and not for professional use.
+### 1. Sidebar for Input
 
-A live version of the application can be found on [Streamlit Community Cloud](https://alejandro-ao-streamlit-cancer-predict-appmain-uitjy1.streamlit.app/). 
+The sidebar contains sliders for various cell nuclei measurements, allowing users to input values for features such as radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension.
 
-## Installation
+### 2. Radar Chart
 
-To run the Cell Image Analyzer locally, you will need to have Python 3.6 or higher installed. Then, you can install the required packages by running:
+The main section of the app displays a radar chart representing the input data. The chart illustrates the mean, standard error, and worst values for different cell nuclei measurements, providing a visual representation of the input data.
 
-```bash
-pip install -r requirements.txt
-```
+### 3. Prediction
 
-This will install all the necessary dependencies, including Streamlit, OpenCV, and scikit-image.
+The app uses a machine learning model to predict the likelihood of the cell cluster being benign or malignant based on the provided measurements. The prediction is displayed along with the probabilities of being benign and malignant.
+
+### 4. Disclaimer
+
+The application includes a disclaimer stressing that it should assist medical professionals in making a diagnosis but should not be used as a substitute for professional medical advice.
 
 ## Usage
-To start the app, simply run the following command:
 
-```bash
-streamlit run app.py
-```
+1. Run the Streamlit web application using the following command:
 
-This will launch the app in your default web browser. You can then upload an image of cells to analyze and adjust the various settings to customize the analysis. Once you are satisfied with the results, you can export the measurements to a CSV file for further analysis.
+   ```bash
+   streamlit run your_script_name.py
+   ```
