@@ -2,6 +2,8 @@
 
 This Streamlit web application is designed to predict whether a breast mass is benign or malignant based on cell nuclei measurements. The app provides an interactive interface where users can input their measurements and receive predictions using a machine learning model.
 
+[Link to Breast Cancer Prediction App](https://ryan-breast-cancer-prediction.streamlit.app/)
+
 ## Features
 
 ### 1. Sidebar for Input
