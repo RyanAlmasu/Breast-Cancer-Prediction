@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import numpy as np
 
 def load_clean_data():
-    data = pd.read_csv("./data/data.csv")
+    data = pd.read_csv("data/data.csv")
     data = data.drop(['Unnamed: 32', 'id'], axis=1)
     data['diagnosis'] = data['diagnosis'].map({'M': 1, 'B': 0})
     return data
@@ -75,8 +75,8 @@ def generate_radar_chart(scaled_input_data):
     return fig
 
 def display_predictions(scaled_input_data):
-    model = pickle.load(open("./model/model.pkl", "rb"))
-    scaler = pickle.load(open("./model/scaler.pkl", "rb"))
+    model = pickle.load(open("model/model.pkl", "rb"))
+    scaler = pickle.load(open("model/scaler.pkl", "rb"))
 
     input_array = np.array(list(scaled_input_data.values())).reshape(1, -1)
     input_array_scaled = scaler.transform(input_array)
@@ -104,7 +104,7 @@ def main():
         initial_sidebar_state="expanded"
     )
 
-    with open("./assets/style.css") as f:
+    with open("assets/style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
     input_data = configure_sidebar()
